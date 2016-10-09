@@ -8,6 +8,7 @@ public class ImpactRegularMeteor : MonoBehaviour
 	void OnCollisionEnter (Collision col)
 	{
 		if (col.gameObject.tag == "Projectile") {
+			CountScore.currentScore++;
 			Instantiate (particle_Meteor, transform.position, transform.rotation);
 			Destroy (col.gameObject);
 			Destroy (gameObject);

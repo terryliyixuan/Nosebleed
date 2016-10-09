@@ -11,15 +11,12 @@ public class ManageGameState : MonoBehaviour
 	public int stateToStart;
 	public GameObject text_Fail;
 
-	private ScrollText scrollTextInScene;
-
 	// Use this for initialization
 	void Start ()
 	{
 		currentState = stateToStart;
 		isGameStarted = false;
 		isGameEnded = false;
-		scrollTextInScene = FindObjectOfType<ScrollText> ();
 	}
 	
 	// Update is called once per frame

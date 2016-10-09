@@ -26,6 +26,7 @@ public class ImpactHeavyMeteor : MonoBehaviour
 	void OnCollisionEnter (Collision col)
 	{
 		if (col.gameObject.tag == "Projectile") {
+			CountScore.currentScore++;
 			Destroy (col.gameObject);
 			currentHealth--;
 			Instantiate (particlePrefab, transform.position, transform.rotation);

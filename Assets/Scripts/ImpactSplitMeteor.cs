@@ -31,6 +31,7 @@ public class ImpactSplitMeteor : MonoBehaviour
 				smallMeteorIns = Instantiate (smallPrefab [i], transform.position, transform.rotation) as GameObject;
 				targetPosition = new Vector3 (transform.position.x + Random.Range (-10, 10), transform.position.y + Random.Range (-10, 10), transform.position.z + Random.Range (-10, 10));
 			}
+			CountScore.currentScore++;
 			Destroy (gameObject);
 		}
 	}
